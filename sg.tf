@@ -9,8 +9,8 @@ resource "aws_security_group" "sg1" {
         to_port = 80
         protocol = "tcp"
         #cidr_blocks = ["0.0.0.0/0"]
-        security_groups = [aws_security_group.sg2.name]
-    }
+        security_groups = [ aws_security_group.sg2.name ]
+           }
     
     egress {
         from_port = 0
@@ -20,6 +20,7 @@ resource "aws_security_group" "sg1" {
     }
   tags= {
     env = "Dev"
+    created-by-terraform = "yes"
   }
 
   
@@ -48,5 +49,5 @@ resource "aws_security_group" "sg2" {
     env = "Dev"
   }
 
-  
+
 }
