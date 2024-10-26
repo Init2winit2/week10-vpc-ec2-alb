@@ -30,7 +30,7 @@ resource "aws_subnet" "public2" {
     vpc_id = aws_vpc.vpc1.id
     map_public_ip_on_launch = true
     tags={
-        Name = "public-subnet-2"
+        Name = "My-public-subnet-2"
         env = "dev"
     }
   
