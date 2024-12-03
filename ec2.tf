@@ -11,6 +11,15 @@ resource "aws_instance" "server1" {
   }
 
 }
+resource "aws_iam_group" "group" {
+  name = "ansiblegroup"
+
+}
+
+resource "aws_iam_user" "user" {
+  name = "ansible"
+}
+
 resource "aws_instance" "server2" {
   ami = "ami-02d7fd1c2af6eead0"
   instance_type = "t2.micro"
